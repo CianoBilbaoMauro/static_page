@@ -12,8 +12,9 @@ html {
 
 /* --- HERO SECTION --- */
 .hero {
+
     height: 100vh;
-    background-image: url('assets/fondo_hero.jpg');
+    background-image: url('assets_hero/fondo_hero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,12 +22,20 @@ html {
     flex-direction: column;
 }
 
-/* --- NAVEGACIÓN (Arriba) --- */
+
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6);
+
+    background-color: rgba(0, 0, 0, 0.6); 
     padding: 20px 0;
     width: 100%;
+
+    position: sticky; 
+    top: 0;           /* Se pega al techo */
+    z-index: 4;    /* Para que pase POR ENCIMA de las imágenes y textos */
+    
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado opcional */
 }
+
 
 .navbar ul {
     list-style: none;
@@ -80,12 +89,292 @@ html {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
 }
 
-/* --- FOOTER (Al final de todo) --- */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+
+/*-------------------------------------------------------------------------------------------*/
+
+/* Sección:  Main */
+
+.seccion-informativa{
+
+    min-height: 100vh; /*Para que ocupe toda la pantalla*/
+    display: flex; /* Encerramos todo en un contenedor    */ 
+    align-items: center; /*  Centramos verticalmente*/
+    padding: 80px 10%; /* Generamos espacio a los lados */
+
+
+}
+
+.contenedor-flexible {
+    display: flex;
+    width: 100%;       /* Para que ocupe todo el ancho disponible */
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 }
 
 
+.columna-texto, .columna-imagen { /* Las columnas se reparten el espacio al 50% */
+    flex: 1;
+}
+
+.columna-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}   
+
+main {
+   
+    overflow-x: hidden;       /* Evita desplazamientos laterales raros */
+}
+
+/* Solo las secciones pares tendrán un fondo un poquito más claro para contrastar */
+.seccion-informativa:nth-child(even) {
+    background-color: hsl(0, 0%, 50%);
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+/* Sección: Mi vision, mi pasión*/
+
+#mi-vision-mi-pasion { 
+
+    height: 100vh;      /* Ocupa toda la pantalla */
+    overflow: hidden;    /* Corta cualquier cosa que intente salir */
+    display: flex;       /* Necesario para centrar el contenido */
+    align-items: center; /* Centrado vertical de foto y texto */
+   
+}
+
+#mi-vision-mi-pasion h2{
+
+    font-family: 'Montserrat', sans-serif; /* Fuente*/
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* Tamaño de la fuente */
+    color:  #F4D03F; /* Color de la fuente*/
+    margin-bottom: 1.5rem; /* Separación con el subtítulo*/ 
+}
+
+#mi-vision-mi-pasion h3 {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: black;
+    font-weight: 700; /*Grosor de la Fuente*/
+    margin-bottom: 1.5rem; 
+
+}
+
+#mi-vision-mi-pasion p {
+    
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.15rem;
+    line-height: 1.8;      /* Espacio entre las oraciones */
+    color: black;        
+    max-width: 800px;      /* Evita que las líneas sean demasiado largas */
+}
+
+#mi-vision-mi-pasion .columna-imagen img {
+    
+    width: 100%;         
+    max-height: 80vh;    
+    
+    
+    object-fit: cover;   
+    object-position: center; /* Centra el recorte */
+
+    filter: grayscale(20%) contrast(110%);
+    border-radius: 8px;
+    display: block;       /* Quita espacios extraños abajo */
+    margin: 0 auto;       /* La centra en su columna */
+    
+}
+
+
+/*/.columna-imagen img:hover {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.02);
+}
+*/
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/* Sección: Historia*/
+
+#historia {
+    height: 100vh;      /* Ocupa toda la pantalla */
+    overflow: hidden;    /* Corta cualquier cosa que intente salir */
+    display: flex;       /* Necesario para centrar el contenido */
+    align-items: center; /* Centrado vertical de foto y texto */
+   
+}
+
+
+#historia h2 {
+
+    font-family: 'Montserrat', sans-serif; /* Fuente*/
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* Tamaño de la fuente */
+    color:  #F4D03F; /* Color de la fuente*/
+    margin-bottom: 1.5rem; /* Separación con el subtítulo*/ 
+}
+
+#historia p {
+
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.15rem;
+    line-height: 2;      /* Espacio entre las oraciones */
+    color: black;        
+    max-width: 800px;      /* Evita que las líneas sean demasiado largas */
+}
+
+#historia .columna-imagen img {
+    
+    width: 100%;         
+    max-height: 80vh;    
+    
+    
+    object-fit: cover;   
+    object-position: center; /* Centra el recorte */
+
+    filter: grayscale(20%) contrast(110%);
+    border-radius: 8px;
+    display: block;       /* Quita espacios extraños abajo */
+    margin: 0 auto;       /* La centra en su columna */
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/* Sección: Evolución*/
+
+#evolucion {
+    height: 100vh;      /* Ocupa toda la pantalla */
+    overflow: hidden;    /* Corta cualquier cosa que intente salir */
+    display: flex;       /* Necesario para centrar el contenido */
+    align-items: center; /* Centrado vertical de foto y texto */
+   
+}
+
+
+#evolucion h2 {
+
+    font-family: 'Montserrat', sans-serif; /* Fuente*/
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* Tamaño de la fuente */
+    color:  #F4D03F; /* Color de la fuente*/
+    margin-bottom: 1.5rem; /* Separación con el subtítulo*/ 
+}
+
+#evolucion p {
+
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.15rem;
+    line-height: 2;      /* Espacio entre las oraciones */
+    color: black;        
+    max-width: 800px;      /* Evita que las líneas sean demasiado largas */
+}
+
+#evolucion .columna-imagen img {
+    
+    width: 100%;         
+    max-height: 80vh;    
+    
+    
+    object-fit: cover;   
+    object-position: center; /* Centra el recorte */
+
+    filter: grayscale(20%) contrast(110%);
+    border-radius: 8px;
+    display: block;       /* Quita espacios extraños abajo */
+    margin: 0 auto;       /* La centra en su columna */
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/* Sección: Actualidad*/
+
+#actualidad {
+    height: 100vh;      /* Ocupa toda la pantalla */
+    overflow: hidden;    /* Corta cualquier cosa que intente salir */
+    display: flex;       /* Necesario para centrar el contenido */
+    align-items: center; /* Centrado vertical de foto y texto */
+   
+}
+
+
+#actualidad h2 {
+
+    font-family: 'Montserrat', sans-serif; /* Fuente*/
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* Tamaño de la fuente */
+    color:  #F4D03F; /* Color de la fuente*/
+    margin-bottom: 1.5rem; /* Separación con el subtítulo*/ 
+}
+
+#actualidad p {
+
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.15rem;
+    line-height: 2;      /* Espacio entre las oraciones */
+    color: black;        
+    max-width: 800px;      /* Evita que las líneas sean demasiado largas */
+}
+
+#actualidad .columna-imagen img {
+    
+    width: 100%;         
+    max-height: 80vh;    
+    
+    
+    object-fit: cover;   
+    object-position: center; /* Centra el recorte */
+
+    filter: grayscale(20%) contrast(110%);
+    border-radius: 8px;
+    display: block;       /* Quita espacios extraños abajo */
+    margin: 0 auto;       /* La centra en su columna */
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/* Sección: El Surf como estilo de vida*/
+
+#el-surf-como-estilo-de-vida {
+    height: 100vh;      /* Ocupa toda la pantalla */
+    overflow: hidden;    /* Corta cualquier cosa que intente salir */
+    display: flex;       /* Necesario para centrar el contenido */
+    align-items: center; /* Centrado vertical de foto y texto */
+   
+}
+
+
+#el-surf-como-estilo-de-vida h2 {
+
+    font-family: 'Montserrat', sans-serif; /* Fuente*/
+    font-size: clamp(2rem, 5vw, 3.5rem);  /* Tamaño de la fuente */
+    color:  #F4D03F; /* Color de la fuente*/
+    margin-bottom: 1.5rem; /* Separación con el subtítulo*/ 
+}
+
+#el-surf-como-estilo-de-vida p {
+
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 1.15rem;
+    line-height: 2;      /* Espacio entre las oraciones */
+    color: black;        
+    max-width: 800px;      /* Evita que las líneas sean demasiado largas */
+}
+
+#el-surf-como-estilo-de-vida .columna-imagen img {
+    
+    width: 100%;         
+    max-height: 80vh;    
+    
+    
+    object-fit: cover;   
+    object-position: center; /* Centra el recorte */
+
+    filter: grayscale(20%) contrast(110%);
+    border-radius: 8px;
+    display: block;       /* Quita espacios extraños abajo */
+    margin: 0 auto;       /* La centra en su columna */
+}
