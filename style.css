@@ -1,252 +1,150 @@
-*/* ---------------- RESET GLOBAL ---------------- */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+/* ---------------- RESET GLOBAL ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
-
 
 /* ---------------- VARIABLES ---------------- */
-
-:root{
-
-    --color-acento:#F4D03F;
-    --color-texto:#000;
-    --color-navbar:rgba(0,0,0,0.6);
-
-    --fuente-titulos:'Montserrat',sans-serif;
-    --fuente-texto:'Open Sans',sans-serif;
-
+:root {
+    --color-acento: #F4D03F;
+    --color-texto: #1a1a1a;
+    --color-texto-claro: #ffffff;
+    --color-navbar: rgba(0, 0, 0, 0.7);
+    --color-fondo-oscuro: #111827;
+    
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
 }
 
-
-/* ---------------- TIPOGRAFIA BASE ---------------- */
-
-h2{
-    font-family:var(--fuente-titulos);
-    font-size:clamp(2rem,5vw,3.5rem);
-    color:var(--color-acento);
-    margin-bottom:1.5rem;
+/* ---------------- TIPOGRAFIA GLOBAL ---------------- */
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
 
-p{
-    font-family:var(--fuente-texto);
-    font-size:1.15rem;
-    line-height:2;
-    color:var(--color-texto);
-    max-width:800px;
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-
-
-/* ---------------- HERO ---------------- */
-
-.hero{
-
-    height:100vh;
-    background-image:url('assets_hero/fondo_hero.jpg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    flex-direction:column;
-
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-acento);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
 
 /* ---------------- NAVBAR ---------------- */
-
-.navbar{
-
-    background-color:var(--color-navbar);
-    padding:20px 0;
-
-    width:100%;
-
-    position:sticky;
-    top:0;
-
-    z-index:4;
-
+.navbar {
+    background-color: var(--color-navbar);
+    padding: 20px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
 }
 
-.navbar ul{
-
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    gap:40px;
-
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-.navbar a{
-
-    color:white;
-    text-decoration:none;
-
-    font-weight:bold;
-    text-transform:uppercase;
-
-    font-size:0.9rem;
-    letter-spacing:2px;
-
-    transition:0.3s;
-
+.navbar a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
 }
 
-.navbar a:hover{
-    color:var(--color-acento);
+.navbar a:hover {
+    color: var(--color-acento);
 }
 
-
-
-/* ---------------- HERO CONTENT ---------------- */
-
-.hero-content{
-
-    flex-grow:1;
-
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:20px;
-
+/* ---------------- HERO (INICIO) ---------------- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+        url('assets_main/img-contacto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--color-texto-claro);
 }
 
-.hero-content h1{
-
-    font-size:5rem;
-    color:var(--color-acento);
-
-    text-transform:uppercase;
-    font-weight:900;
-
-    text-shadow:4px 4px 15px rgba(0,0,0,0.9);
-
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin-bottom: 15px;
+    text-shadow: 4px 4px 15px rgba(0,0,0,0.8);
 }
 
-.hero-content h4{
-
-    color:white;
-    font-size:1.8rem;
-
-    font-weight:500;
-    font-style:italic;
-
-    margin-top:20px;
-    padding-top:15px;
-
-    border-top:5px solid var(--color-acento);
-
-    text-shadow:2px 2px 8px rgba(0,0,0,0.8);
-
+.hero h4 {
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
+    font-weight: 400;
+    font-style: italic;
+    border-top: 4px solid var(--color-acento);
+    padding-top: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
-
-
-/* ---------------- MAIN ---------------- */
-
-main{
-    overflow-x:hidden;
+/* ---------------- SECCIONES INFORMATIVAS ---------------- */
+.seccion-informativa {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
 }
 
-
-/* ---------------- SECCIONES INFORMACION ---------------- */
-
-.seccion-informativa{
-
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-
-    padding:80px 10%;
-
+.seccion-informativa:nth-child(even) {
+    background-color: #f4f4f4;
 }
 
-.seccion-informativa:nth-child(even){
-    background-color:hsl(0,0%,50%);
+.contenedor-flexible {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 }
 
-
-
-/* ---------------- CONTENEDOR FLEX ---------------- */
-
-.contenedor-flexible{
-
-    display:flex;
-
-    width:100%;
-
-    align-items:center;
-    justify-content:space-between;
-
-    gap:60px;
-
+.columna-texto, .columna-imagen {
+    flex: 1;
+    min-width: 320px;
 }
 
-
-/* COLUMNAS */
-
-.columna-texto,
-.columna-imagen{
-    flex:1;
+.columna-imagen img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
-
-
-/* IMAGENES */
-
-.columna-imagen img{
-
-    width:100%;
-    max-height:80vh;
-
-    object-fit:cover;
-    object-position:center;
-
-    filter:grayscale(20%) contrast(110%);
-
-    border-radius:8px;
-
-    display:block;
-    margin:0 auto;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.5);
-
-}
-
-
-
-/* ---------------- SECCIONES FULLSCREEN ---------------- */
-
-#mi-vision-mi-pasion,
-#historia,
-#evolucion,
-#actualidad,
-#el-surf-como-estilo-de-vida{
-
-    height:100vh;
-
-    overflow:hidden;
-
-    display:flex;
-    align-items:center;
-
-}
-
-
 
 /* ---------------- CONTACTO ---------------- */
 
