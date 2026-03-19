@@ -30,3 +30,7 @@ Detalles de Diseño (UI)
 *Jerarquía Visual: Uso estratégico de font-weight y line-height para diferenciar contenidos y facilitar la lectura de datos informativos, permitiendo tener una tipografía e interlineado amigable a la visual del usuario.
 
 *Contenedores: Uso de un max-width en las secciones para asegurar que el contenido se vea equilibrado en pantallas de gran formato y que los texto no queden con oraciones tan largas.
+
+
+Link del sitio en vivo: [Ver Proyecto Online](https://cianobilbaomauro.github.io/static_page/)
+
