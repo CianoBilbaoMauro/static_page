@@ -209,10 +209,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote suave */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-/* Efecto Hover (Movimiento y Brillo) */
+
 .tarjeta-frase:hover {
     transform: translateY(-15px);
     background-color: rgba(255, 255, 255, 0.08);
