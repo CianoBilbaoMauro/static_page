@@ -1,17 +1,17 @@
 # static_page 
 Diseño y estructura Web
+
 *Este proyecto consiste en una landing page desarrollada íntegramente con HTML5 y CSS3. El objetivo principal fue crear una interfaz informativa, limpia y con una estética moderna inspirada en la cultura del surf.
 
 Tecnologías y conceptos Aplicados
-*HTML5: Uso de etiquetas estructurales (<nav>, <section>, <header>,<main>, <footer>) para un código limpio y estructurado.
+*HTML5: Uso de etiquetas estructurales para un código limpio y estructurado.
 
-*CSS: Implementación de un sistema de diseño basado en variables CSS para mantener la consistencia en la paleta de colores y tipografía, declarando variables globales para la reutilización de código.
+*CSS: Implementación de un sistema de diseño basado en variables CSS para mantener la consistencia en la paleta de colores y tipografía, declarando variables globales para la reutilización de código y modularidad del sistema.
 
 *Maquetación con Flexbox: Arquitectura de contenedores flexibles para lograr un diseño alineado y adaptable a diferentes resoluciones.
 
 
 Organización del Proyecto
-*El sitio se divide en módulos lógicos que permiten una navegación intuitiva:
 
 *Navegación: Barra superior con posicionamiento sticky para acceso rápido a las secciones.
 
@@ -23,8 +23,9 @@ Organización del Proyecto
 
 
 Detalles de Diseño (UI)
-*Efectos de Estado: Micro-interacciones mediante las pseudo-clases :hover y :focus para mejorar el feedback visual en botones e inputs.
+
+*Efectos : Micro-interacciones mediante las pseudo-clases :hover y :focus para mejorar el feedback visual en botones e inputs.
 
 *Jerarquía Visual: Uso estratégico de font-weight y line-height para diferenciar contenidos y facilitar la lectura de datos informativos.
 
-*Contenedores: Uso de un max-width global de 1300px para asegurar que el contenido se vea equilibrado en pantallas de gran formato.
+*Contenedores: Uso de un max-width global para asegurar que el contenido se vea equilibrado en pantallas de gran formato.
