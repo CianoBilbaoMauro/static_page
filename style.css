@@ -11,7 +11,7 @@ html {
 
 /* ---------------- VARIABLES GLOBALES ---------------- */
 :root {
-    --color-acento: #F4D03F;
+    --color-acento: #0AC4E0;
     --color-texto: #1a1a1a;
     --color-texto-claro: #ffffff;
     --color-blanco: #ffffff; 
@@ -52,41 +52,67 @@ p {
 }
 
 /* ---------------- NAV ---------------- */
-
 .navbar {
     background-color: var(--color-navbar);
-    padding: 15px 0;
+    padding: 15px;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+/* ocultar checkbox */
+#menu-toggle {
+    display: none;
 }
 
-.navbar ul {
+/* icono */
+.menu-icon {
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔴 MENÚ OCULTO */
+.menu {
     list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-navbar);
+
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    text-align: center;
+
+    max-height: 0; /* 🔥 clave */
+    overflow: hidden; /* 🔥 clave */
+    transition: max-height 0.3s ease;
 }
 
-.navbar a {
+/* links */
+.menu li {
+    padding: 15px 0;
+}
+
+.menu a {
     color: var(--color-blanco);
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.85rem;
-    letter-spacing: 2px;
-    transition: 0.3s ease;
 }
 
-.navbar a:hover {
+/* hover */
+.menu a:hover {
     color: var(--color-acento);
-    transform: translateY(-2px);
 }
 
+/* 🔥 ABRIR MENÚ */
+#menu-toggle:checked ~ .menu {
+    max-height: 500px; /* suficiente para mostrar todo */
+}
 /* ---------------- HERO ---------------- */
 
 .hero {
@@ -132,7 +158,9 @@ p {
 
 .seccion-informativa:nth-child(even) {
     background-color: hwb(220 33% 56% / 0.905);
+    
 }
+
 
 .contenedor-flexible {
     display: flex;
@@ -155,6 +183,12 @@ p {
     box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
+#historia p,
+#actualidad p {
+    color: white;
+} 
+
+
 /*------------------ Tarjetas-------------------------*/
 
 .seccion-frases {
@@ -162,7 +196,7 @@ p {
     background-color: var(--color-fondo-oscuro); 
     padding-bottom: 100px;
     padding-top: 0;
-    overflow: hidden;
+overflow: hidden;
 }
 
 /* Contenedor del SVG para la Ola */
@@ -229,6 +263,27 @@ p {
     margin: 0;
     font-size: 1.05rem;
 }
+/*----------------- VIDEO-------------------*/
+
+
+#video-section {
+    width: 100%;
+    margin: 0;
+}
+
+#contenedor-video {
+    width: 100%;
+    height: 90vh;
+}
+
+#contenedor-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
 /* ---------------- CONTACTO ---------------- */
 
 #contacto {
@@ -252,6 +307,7 @@ p {
     align-items: center;
     justify-content: center;
 }
+
 
 /* ---------------- FORMULARIO ---------------- */
 

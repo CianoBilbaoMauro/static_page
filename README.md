@@ -32,5 +32,5 @@ Detalles de Diseño (UI)
 *Contenedores: Uso de un max-width en las secciones para asegurar que el contenido se vea equilibrado en pantallas de gran formato y que los texto no queden con oraciones tan largas.
 
 
-Link del sitio en vivo: [Ver Proyecto Online](https://cianobilbaomauro.github.io/static_page/)
+Link del sitio en vivo: [Ver Proyecto Online](https://cianobilbaomauro.github.io/static_page/) 
 

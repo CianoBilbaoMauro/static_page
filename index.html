@@ -17,7 +17,11 @@
 
 
     <nav class="navbar">
-        <ul>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+
+        <ul class="menu">
 
             <li><a href="#mi-vision-mi-pasion"> Mi visión, mi pasión</a></li>
             <li><a href="#historia"> Historia </a></li>
@@ -25,13 +29,14 @@
             <li><a href="#actualidad"> Actualidad</a></li>
             <li><a href="#el-surf-como-estilo-de-vida"> El Surf como Estilo de Vida</a></li>
         </ul>
+
     </nav>
 
     <header class="hero">
 
         <div class="hero-content">
-            <h1>Mi Visión y Pasión.</h1>
-            <h4>El Surf como Estilo de Vida y el Desarrollo como Libertad.</h4>
+            <h1>Mi Visión y Pasión</h1>
+            <h4>El Surf como Estilo de Vida y el Desarrollo como Libertad</h4>
         </div>
 
     </header>
@@ -46,11 +51,12 @@
 
                 <div class="columna-texto">
 
-                    <h2>Mi visión, mi pasión.</h2>
+                    <h2>Mi visión, mi pasión</h2>
 
-                    <h3> ¿Como surge este sentimiento? </h3>
+                    <h3> ¿Cómo surge este sentimiento? </h3>
 
-                    <p>Vivir en una ciudad costera y surfear desde siempre me enseñó que la libertad no es algo que se
+                    <p>Vivir en una ciudad costera y surfear desde siempre me enseñó que la <strong> libertad </strong>
+                        no es algo que se
                         encuentra, sino algo que se construye. Para mí, el surf no es simplemente un deporte; es la
                         filosofía que
                         define mi relación con el mundo:
@@ -89,7 +95,7 @@
 
                 <div class="columna-texto">
 
-                    <h2>Historia del Surf.</h2>
+                    <h2>Historia del Surf</h2>
 
                     <p> <strong> "El surf no es un invento moderno, es un legado de reyes."</strong>
                         Aunque hoy lo vemos como un deporte global, el surf nació hace siglos en las islas de la
@@ -103,7 +109,9 @@
                         libertad y aventura que hoy nos define.
                         Hoy, surfear es mucho más que pararse en una tabla: es entender los ciclos del mar, respetar la
                         fuerza de la naturaleza y buscar, en cada sesión, ese momento de paz perfecta que solo se
-                        encuentra dentro del agua.</p>
+                        encuentra dentro del agua.
+                    </p>
+
                 </div>
 
             </div>
@@ -118,9 +126,9 @@
 
                 <div class="columna-texto">
 
-                    <h2>Evolución del Surf.</h2>
+                    <h2>Evolución del Surf</h2>
 
-                    <p> <strong> "La esencia es la misma, pero las herramientas han cambiado el juego."</strong>
+                    <p> <strong> "La esencia es la misma, pero las herramientas han cambiado el juego"</strong>
 
                         La evolución del surf es una historia de ingeniería y obsesión por la eficiencia.
                         Pasamos de las pesadas tablas Olo de madera maciza, que superaban los 50 kilos, a materiales
@@ -165,7 +173,7 @@
 
                     <h2>El Surf en la actualidad</h2>
 
-                    <p> <strong>"Ganar ya no es una cuestión de suerte, es una cuestión de analítica."</strong>
+                    <p> "Ganar ya no es una cuestión de suerte, es una cuestión de analítica"
 
                         En la actualidad, la competencia de élite ha transformado al surf en un deporte de métrica pura.
                         Los atletas ya no solo "sienten" el mar;
@@ -190,9 +198,9 @@
 
             <div class="contenedor-flexible">
                 <div class="columna-texto">
-                    <h2> El Surf como estilo de vida.</h2>
+                    <h2> El Surf como estilo de vida</h2>
 
-                    <p> <strong> "No surfeo para escapar de la vida, sino para que la vida no se me escape."</strong>
+                    <p> <strong> "No surfeo para escapar de la vida, sino para que la vida no se me escape"</strong>
 
                         El surf es el eje que organiza mi mundo, es la búsqueda constante de fluidez. Vivir bajo la
                         filosofía del surf significa entender que la paciencia es una forma
@@ -234,11 +242,13 @@
                 </div>
 
                 <div class="tarjeta-frase">
-                    <p>"El surf te enseña que siempre hay otra ola en camino. Solo tenés que estar en la posición correcta para remarla."</p>
+                    <p>"El surf te enseña que siempre hay otra ola en camino. Solo tenés que estar en la posición
+                        correcta para remarla."</p>
                 </div>
 
                 <div class="tarjeta-frase">
-                    <p>"Entrás al agua cargando el mundo y salís sintiendo que el mundo es el que te carga a vos. El océano no solo sana, te transforma."</p>
+                    <p>"Entrás al agua cargando el mundo y salís sintiendo que el mundo es el que te carga a vos. El
+                        océano no solo sana, te transforma."</p>
                 </div>
 
                 <div class="tarjeta-frase">
@@ -250,12 +260,21 @@
         </section>
 
 
+        <section id="video-section">
 
+            <div id="contenedor-video">
+
+                <video autoplay muted loop playsinline>
+                    <source src="assets_hero/video-surf.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
 
 
         <section id="contacto">
 
-            <div id="contenedor">
+            <div class="contenedor-contacto">
 
                 <div class="columna-form">
 
@@ -297,7 +316,7 @@
                                 Email
                                 <input type="email" id="email" placeholder="ejemplo@gmail.com" required>
                             </label>
-                        </p>            
+                        </p>
 
                         <button type="submit">Enviar</button>
 
