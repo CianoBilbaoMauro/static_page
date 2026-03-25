@@ -283,7 +283,46 @@ overflow: hidden;
     display: block;
 }
 
+/*----------------- TIPS ---------------------*/
 
+#tips-surf{
+    background-color: var(--color-fondo-oscuro);
+    width: 100%;
+    padding: 100px 0;
+    
+}
+
+.contenedor-tips-surf{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-tips {
+    color: var(--color-acento);
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;   /* 🔥 clave */
+    font-weight: 900;
+    margin-bottom: 60px; /* 🔥 separa del contenido */
+}
+.tip-item{
+   display: flex;
+   gap: 20px;
+   align-items: flex-start;
+}
+
+.tip-numero {
+    color: var(--color-blanco);
+    font-weight: 900;
+    font-size: 2rem;
+    min-width: 40px;
+}
+
+.tip-contenido {
+    color: var(--color-blanco);
+    font-family: var(--fuente-texto);
+}
 /* ---------------- CONTACTO ---------------- */
 
 #contacto {
