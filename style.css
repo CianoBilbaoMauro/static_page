@@ -325,6 +325,96 @@ overflow: hidden;
     color: var(--color-texto);
     font-family: var(--fuente-texto);
     max-width: none;
+} 
+
+/*------------------ TAKE OFF ----------------*/
+
+/* SECTION */
+#take-off {
+    min-height: auto; /* quitar 100vh para que no se estire demasiado */
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra contenido horizontal */
+    background-color: var(--color-fondo-oscuro); /* opcional: color de fondo suave */
+}
+
+/* TITULO */
+.titulo-takeoff {
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    color: var(--color-acento);
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.contenedor-takeoff {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* espacio entre tarjetas */
+    max-width: 1000px; /* limita ancho para que no se estire demasiado */
+    width: 100%;
+}
+
+/* TARJETAS */
+.paso {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* bordes redondeados */
+    
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px; /* tamaño compacto */
+}
+
+
+/* IMAGEN */
+.paso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px; /* igualar al contenedor */
+    transition: transform 0.4s ease;
+}
+
+/* HOVER ZOOM IMAGEN */
+.paso:hover img {
+    transform: scale(1.05);
+}
+
+/* OVERLAY OSCURO */
+.paso::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.paso:hover::after {
+    opacity: 1;
+}
+
+/* TEXTO */
+.texto-hover {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: black;
+    font-weight: 900;
+    font-size: 2rem;
+    opacity: 0;
+    transition: 0.3s ease;
+
+}
+
+.paso:hover .texto-hover {
+    opacity: 1;
 }
 /* ---------------- CONTACTO ---------------- */
 
