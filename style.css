@@ -286,7 +286,7 @@ overflow: hidden;
 /*----------------- TIPS ---------------------*/
 
 #tips-surf{
-    background-color: var(--color-fondo-oscuro);
+    background-color: var(--color-blanco);
     width: 100%;
     padding: 100px 0;
     
@@ -302,26 +302,29 @@ overflow: hidden;
     color: var(--color-acento);
     text-align: center;
     font-family: var(--fuente-titulos);
-    font-size: 2.5rem;   /* 🔥 clave */
+    font-size: 2rem;   /* 🔥 clave */
     font-weight: 900;
-    margin-bottom: 60px; /* 🔥 separa del contenido */
+    margin-bottom: 50px; /* 🔥 separa del contenido */
+    
 }
 .tip-item{
    display: flex;
    gap: 20px;
    align-items: flex-start;
+   border-top: 1.5px solid var(--color-acento);
 }
 
 .tip-numero {
-    color: var(--color-blanco);
+    color: var(--color-texto);
     font-weight: 900;
     font-size: 2rem;
     min-width: 40px;
 }
 
-.tip-contenido {
-    color: var(--color-blanco);
+.tip-contenido p {
+    color: var(--color-texto);
     font-family: var(--fuente-texto);
+    max-width: none;
 }
 /* ---------------- CONTACTO ---------------- */
 
@@ -331,7 +334,7 @@ overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('assets_contacto/fondo-form.jpg');
+    background-image: url('assets_main/seccion-contacto/fondo-form.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
