@@ -9,6 +9,15 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 /* ---------------- VARIABLES GLOBALES ---------------- */
 :root {
     --color-acento: #0AC4E0;
@@ -108,7 +117,7 @@ p {
 
 
 #menu-toggle:checked ~ .menu {
-    max-height: 500px; /* suficiente para mostrar todo */
+    max-height: 100vh; 
 }
 /* ---------------- HERO ---------------- */
 
@@ -196,12 +205,12 @@ p {
 overflow: hidden;
 }
 
-/* Contenedor del SVG para la Ola */
+
 .wave-divider {
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg); /* Invertimos para que la curva mire hacia abajo */
+    transform: rotate(180deg); 
     background-color: transparent;
 }
 
@@ -516,3 +525,137 @@ button[type="submit"]:hover {
     font-style: italic;
 }
 
+/*---------------- RESPONSIVE ---------------*/
+
+
+/* MOBILE (hasta 599px) */
+@media (max-width: 599px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+  
+    .hero {
+        background-attachment: scroll;
+        padding: 40px 20px;
+    }
+
+    
+    .seccion-informativa {
+        padding: 60px 20px;
+    }
+
+    .contenedor-flexible {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .columna-texto,
+    .columna-imagen {
+        width: 100%;
+    }
+
+    .columna-imagen img {
+        max-height: none;
+    }
+
+   
+    .contenedor-frases {
+        padding: 0 20px;
+    }
+
+    #contenedor-video {
+        height: 50vh;
+    }
+
+    
+    .tip-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tip-numero {
+        font-size: 1.5rem;
+    }
+
+
+    .contenedor-takeoff {
+        grid-template-columns: 1fr;
+    }
+
+    .paso {
+        height: 200px;
+    }
+
+    form {
+        max-width: 100%;
+
+    }
+
+    #contacto {
+        background-attachment: scroll;
+    }
+}
+
+
+
+/*  TABLET (600px - 899px)  */
+@media (min-width: 600px) and (max-width: 899px) {
+
+
+    .contenedor-flexible {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .seccion-informativa {
+        padding: 80px 40px;
+    }
+
+
+    .contenedor-takeoff {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+ 
+    #contenedor-video {
+        height: 70vh;
+    }
+
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+
+/*  DESKTOP (900px+)  */
+@media (min-width: 900px) {
+
+    
+    .menu-icon {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        max-height: none;
+        background: transparent;
+    }
+
+    .menu li {
+        padding: 0 15px;
+    }
+
+  
+    .contenedor-flexible {
+        flex-direction: row;
+    }
+
+    .contenedor-takeoff {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
